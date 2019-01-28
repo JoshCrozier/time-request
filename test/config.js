@@ -14,14 +14,14 @@ Options:
 const TIMING_OUTPUT = `
 Request Phase               Duration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Socket Open                 0.00 ms 
-DNS Lookup                  0.00 ms 
-TCP Connection              0.00 ms 
-TLS Handshake               0.00 ms 
-Time to First Byte          0.00 ms 
-Content Transfer            0.00 ms 
+Socket Open                 0.00 ms
+DNS Lookup                  0.00 ms
+TCP Connection              0.00 ms
+TLS Handshake               0.00 ms
+Time to First Byte          0.00 ms
+Content Transfer            0.00 ms
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Total                       0.00 ms 
+Total                       0.00 ms
 `;
 
 module.exports = {

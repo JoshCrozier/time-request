@@ -11,9 +11,16 @@ const cli = minimalCli({
   ]
 });
 
+const writeOutput = output => process.stdout.write(output);
+const hasInput = cli.commands.length > 0 || Object.keys(cli.flags).length > 0;
 const url = cli.commands[0] || cli.flags.url;
-const writeOutput = output => process.stdout.write(output + '\n');
 
-timeRequest(url)
-  .then(writeOutput)
-  .catch(writeOutput);
+if (!hasInput) {
+  writeOutput(cli.help);
+} else {
+  timeRequest(url)
+    .then(writeOutput)
+    .catch(error => {
+      writeOutput(`Unable to make request: ${error}\n`);
+    });
+}
